@@ -1,2 +1,5 @@
-Write-Host "Hello World from $env:COMPUTERNAME"
-Write-Host get-date
+get-date
+ 
+Get-CimInstance -ClassName Win32_ComputerSystem 
+
+ipconfig /all
