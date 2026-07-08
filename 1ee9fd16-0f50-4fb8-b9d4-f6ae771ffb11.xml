@@ -1,0 +1,57 @@
+<joblist>
+  <job>
+    <context>
+      <options preserveOrder='true'>
+        <option name='addsomenumber' required='true' />
+      </options>
+    </context>
+    <defaultTab>nodes</defaultTab>
+    <description></description>
+    <dispatch>
+      <excludePrecedence>true</excludePrecedence>
+      <keepgoing>false</keepgoing>
+      <rankOrder>ascending</rankOrder>
+      <successOnEmptyNodeFilter>false</successOnEmptyNodeFilter>
+      <threadcount>1</threadcount>
+    </dispatch>
+    <executionEnabled>true</executionEnabled>
+    <id>1ee9fd16-0f50-4fb8-b9d4-f6ae771ffb11</id>
+    <loglevel>INFO</loglevel>
+    <name>test</name>
+    <nodeFilterEditable>true</nodeFilterEditable>
+    <nodefilters>
+      <filter>node_.*</filter>
+    </nodefilters>
+    <nodesSelectedByDefault>true</nodesSelectedByDefault>
+    <plugins />
+    <runnerSelector>
+      <filter>CURL</filter>
+      <runnerFilterMode>TAGS</runnerFilterMode>
+      <runnerFilterType>TAG_FILTER_AND</runnerFilterType>
+    </runnerSelector>
+    <scheduleEnabled>true</scheduleEnabled>
+    <schedules />
+    <sequence keepgoing='true' strategy='node-first'>
+      <command>
+        <exec>date;hostname</exec>
+      </command>
+      <command>
+        <exec>sleep 10</exec>
+      </command>
+      <command>
+        <autoSecureInput>false</autoSecureInput>
+        <fileExtension>sh</fileExtension>
+        <passSecureInput>false</passSecureInput>
+        <script><![CDATA[#!/bin/bash
+
+ echo "number that you choose \n"
+ 
+ echo "@option.addsomenumber@" ]]></script>
+        <scriptargs />
+        <scriptinterpreter>sh</scriptinterpreter>
+      </command>
+    </sequence>
+    <user>mauricio</user>
+    <uuid>1ee9fd16-0f50-4fb8-b9d4-f6ae771ffb11</uuid>
+  </job>
+</joblist>
